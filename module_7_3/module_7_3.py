@@ -43,7 +43,7 @@ class WordsFinder:
 
     def count(self, word):
         words_dict = self.get_all_words()
-
+        word = word.lower()
         dict_ = {}
 
         for name, words in words_dict.items():
@@ -62,7 +62,7 @@ finder1 = WordsFinder('test_file.txt')
 finder2 = WordsFinder('test_file2.txt')
 
 print(finder1.get_all_words())
-print(finder1.find('is'))
+print(finder1.find('Is'))
 print(finder1.count('is'))
 
 print(finder2.get_all_words())
